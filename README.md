@@ -1,2 +1,7 @@
-# delta-demo
-this is a demo for git and github class.
+var debounce = function(fn, t = 1000) {
+    let timer;
+    return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn(...args), t);
+    }
+};
